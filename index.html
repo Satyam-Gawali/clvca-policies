@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Center | CLVCA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg-body: #f8fafc;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      max-width: 450px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+      text-align: center;
+      border: 1px solid #e2e8f0;
+    }
+
+    .logo-area {
+      width: 70px;
+      height: 70px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 800;
+      margin: 0 auto 25px;
+      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 35px;
+      line-height: 1.5;
+    }
+
+    .links-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .policy-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      background: #ffffff;
+      color: var(--text-main);
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s ease;
+    }
+
+    .policy-link:hover {
+      border-color: var(--primary-color);
+      background-color: #f0f7ff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .policy-link span {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .icon {
+      font-size: 1.2rem;
+    }
+
+    .arrow {
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="logo-area">C</div>
+  
+  <h1>CLVCA Legal Center</h1>
+  <p>Please review our official policies and terms to understand how we protect your data and govern app usage.</p>
+
+  <div class="links-wrapper">
+    <a href="privacy-policy.html" class="policy-link">
+      <span><span class="icon">🛡️</span> Privacy Policy</span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a href="terms.html" class="policy-link">
+      <span><span class="icon">📜</span> Terms & Conditions</span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    © 2026 CLVCA by <strong>Satyam K. Gawali</strong>
+  </footer>
+</div>
+
+</body>
+</html>
