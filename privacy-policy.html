@@ -179,33 +179,38 @@
     </ul>
   </section>
 
-  <section>
-    <h2>5. Local Storage</h2>
-    <ul>
-      <li>Translation history and application preferences are stored directly on the user's device.</li>
-      <li>Users have full control to clear this data via the application settings at any time.</li>
-    </ul>
-  </section>
+ <section>
+  <h2>5. Local Storage & Data Persistence</h2>
+  <ul>
+    <li><strong>Translation History:</strong> Your past conversations and translated text are stored directly on your device for your reference.</li>
+    <li><strong>App Configurations:</strong> Preferences such as language settings and theme mode are saved locally.</li>
+    <li><strong>User Control:</strong> Users have the absolute right to <strong>clear all history</strong> or reset the application data via the settings menu at any time.</li>
+  </ul>
+  <p>We do not sync your conversation history to our servers unless you explicitly opt-in for cloud-based backup features (if available).</p>
+</section>
 
   <section>
-    <h2>6. Permissions</h2>
-    <ul>
-      <li><strong>Microphone:</strong> To capture voice input for real-time translation.</li>
-      <li><strong>Bluetooth & Wi-Fi:</strong> Essential for peer-to-peer device discovery and connection.</li>
-      <li><strong>Location:</strong> Required by Android for nearby device discovery (strictly not used for tracking or profiling).</li>
-      <li><strong>Storage:</strong> To manage offline language models and cached assets.</li>
-    </ul>
-  </section>
+  <h2>6. Permissions & Usage</h2>
+  <p>To provide a seamless voice translation experience, CLVCA requires the following permissions:</p>
+  <ul>
+    <li><strong>Microphone:</strong> Required strictly to capture voice for real-time translation. Audio is processed and immediately discarded.</li>
+    <li><strong>Bluetooth & Wi-Fi:</strong> Used for peer-to-peer discovery. This allows devices to find each other without a central server.</li>
+    <li><strong>Location:</strong> On certain Android versions, location permission is mandatory for Bluetooth/Wi-Fi scanning. We <strong>do not</strong> track your physical coordinates or movements.</li>
+    <li><strong>Nearby Devices:</strong> Required on Android 12+ to connect with friends for local voice chat.</li>
+    <li><strong>Storage/Media:</strong> Used only to store downloaded offline language models and cached app configurations.</li>
+  </ul>
+</section>
 
   <section>
-    <h2>7. Third-Party Services</h2>
-    <p>We use industry-standard infrastructure to handle non-conversation metadata:</p>
-    <ul>
-      <li><strong>Firebase Authentication:</strong> For secure and seamless user login.</li>
-      <li><strong>Firestore:</strong> To store minimal user-related metadata, such as consent status.</li>
-    </ul>
-    <p>These services operate under their own privacy policies, and we encourage users to review them.</p>
-  </section>
+  <h2>7. Third-Party Services & Advertising</h2>
+  <p>We use industry-standard infrastructure and advertising partners to support our application:</p>
+  <ul>
+    <li><strong>Firebase Authentication:</strong> For secure and seamless user login.</li>
+    <li><strong>Firestore:</strong> To store minimal user-related metadata, such as consent status.</li>
+    <li><strong>Google AdMob:</strong> We use Google AdMob to display advertisements. AdMob may collect and use certain data (such as <strong>Device ID, IP Address, and Advertising ID</strong>) to show relevant ads and analyze ad performance.</li>
+  </ul>
+  <p>These services operate under their own privacy policies. You can manage your ad preferences through your device settings.</p>
+</section>
 
   <section>
     <h2>8. User Control & Data Deletion</h2>
@@ -218,6 +223,19 @@
   <section>
     <h2>9. Policy Updates</h2>
     <p>This policy may be updated periodically to reflect changes in our practices or legal requirements. Your continued use of CLVCA signifies your acceptance of these terms.</p>
+  </section>
+
+  <section>
+    <h2>10. Children’s Privacy</h2>
+    <p>
+      <strong>CLVCA</strong> is designed for a general audience and is <strong>not intended for children under the age of 13</strong>. 
+      We do not knowingly collect, store, or process personal information from children under 13.
+    </p>
+    <ul>
+      <li>If you are a parent or guardian and believe your child has provided us with personal data (such as an email address or profile info), please contact us immediately.</li>
+      <li>If we discover that we have inadvertently collected personal information from a child under 13, we will take swift action to delete that information from our local storage and Firebase servers.</li>
+    </ul>
+    <p>By using this application, you represent that you are at least 13 years of age or have the necessary parental consent to use the service.</p>
   </section>
 
   <div class="contact-box">
