@@ -8,6 +8,11 @@
   --border-color: #e5e7eb;
 }
 
+.top-spacer {
+  height: 60px;
+  width: 100%;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.5;
