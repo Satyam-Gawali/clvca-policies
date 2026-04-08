@@ -14,7 +14,7 @@ body {
   background-color: var(--bg-body);
   color: var(--text-main);
   margin: 0;
-  padding: 30px 15px;
+  padding: 50px 15px;
   font-size: 13px;
 }
 
@@ -30,6 +30,7 @@ body {
 header {
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 15px;
+  padding-top: 35px;
   margin-bottom: 25px;
 }
 
