@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Quick Nav Styling */
     nav {
       display: flex;
       gap: 10px;
@@ -43,69 +42,69 @@
   </header>
 
   <nav>
-    <button onclick="document.getElementById('voice').scrollIntoView()">🎤 Voice</button>
-    <button onclick="document.getElementById('p2p').scrollIntoView()">📶 P2P Mode</button>
-    <button onclick="document.getElementById('privacy').scrollIntoView()">🔒 Privacy</button>
-    <button onclick="document.getElementById('faq').scrollIntoView()">❓ FAQ</button>
+    <button onclick="document.getElementById('voice').scrollIntoView()">Voice Recognition</button>
+    <button onclick="document.getElementById('p2p').scrollIntoView()">P2P Mode</button>
+    <button onclick="document.getElementById('privacy').scrollIntoView()">Privacy Promise</button>
+    <button onclick="document.getElementById('faq').scrollIntoView()">FAQ</button>
   </nav>
 
-  <p class="intro">CLVCA (Cross-Language Voice Chat Application) is an offline AI-powered communication app designed for real-time translation between nearby devices. [cite: 263]</p>
+  <p class="intro">CLVCA (Cross-Language Voice Chat Application) is an offline AI-powered communication app designed for real-time translation between nearby devices.</p>
 
   <section id="voice">
-    <h2>🎤 Voice Recognition & Output</h2>
+    <h2>Voice Recognition & Output</h2>
     <p>Understand how CLVCA processes your speech and generates audio.</p>
     <ul>
-      <li><strong>Speech-to-Text (STT):</strong> Translation works 100% offline, but high-accuracy voice recognition depends on your device's native engine. [cite: 263, 268] Some devices may require a one-time internet connection to verify voice data.</li>
-      <li><strong>Silent Output (TTS):</strong> CLVCA uses the <b>Flutter TTS</b> engine. [cite: 722] If you hear no sound, please ensure "Speech Services by Google" is set as your default engine in your Phone Settings.</li>
-      <li><strong>Regional Accents:</strong> You can customize speaking speed, pitch, and regional accents in <b>Settings > Voice & Audio</b>. [cite: 182, 183]</li>
+      <li><strong>Speech-to-Text (STT):</strong> Translation works 100% offline, but high-accuracy voice recognition depends on your device's native engine. Some devices may require a one-time internet connection to verify voice data.</li>
+      <li><strong>Silent Output (TTS):</strong> CLVCA uses the Flutter TTS engine. If you hear no sound, please ensure "Speech Services by Google" is set as your default engine in your Phone Settings.</li>
+      <li><strong>Regional Accents:</strong> You can customize speaking speed, pitch, and regional accents in Settings > Voice & Audio.</li>
     </ul>
   </section>
 
   <section id="p2p">
-    <h2>📶 P2P Connectivity</h2>
-    <p>Connect with nearby friends without using cellular data or the internet. [cite: 263, 266]</p>
+    <h2>P2P Connectivity</h2>
+    <p>Connect with nearby friends without using cellular data or the internet.</p>
     <ul>
-      <li><strong>How to Link:</strong> One user must <b>"Start Hosting"</b> while the other selects <b>"Join Friend."</b> [cite: 311, 312]</li>
-      <li><strong>Scanning QR:</strong> For instant pairing, ask your friend to scan the QR code displayed on the Host's screen. [cite: 330, 331]</li>
+      <li><strong>How to Link:</strong> One user must "Start Hosting" while the other selects "Join Friend."</li>
+      <li><strong>Scanning QR:</strong> For instant pairing, ask your friend to scan the QR code displayed on the Host's screen.</li>
       <li><strong>Effective Range:</strong> Maintain a distance of 10-15 meters for a stable Bluetooth/Wi-Fi connection.</li>
     </ul>
   </section>
 
   <section id="privacy">
-    <h2>🔒 Privacy Promise</h2>
-    <p>Your privacy is built into the core of CLVCA. [cite: 271]</p>
+    <h2>Privacy Promise</h2>
+    <p>Your privacy is built into the core of CLVCA.</p>
     <ul>
-      <li><strong>On-Device Processing:</strong> CLVCA does not upload your personal voice data to any server. [cite: 271] All processing happens locally on your hardware. [cite: 269]</li>
-      <li><strong>History Control:</strong> You can permanently delete your conversation logs by selecting <b>"Clear All History"</b> in the History screen. [cite: 171, 175]</li>
-      <li><strong>Cache Reset:</strong> Logging out or clearing app data in Settings will reset your configurations and temporary cache. [cite: 734, 736]</li>
+      <li><strong>On-Device Processing:</strong> CLVCA does not upload your personal voice data to any server. All processing happens locally on your hardware.</li>
+      <li><strong>History Control:</strong> You can permanently delete your conversation logs by selecting "Clear All History" in the History screen.</li>
+      <li><strong>Cache Reset:</strong> Logging out or clearing app data in Settings will reset your configurations and temporary cache.</li>
     </ul>
   </section>
 
   <section id="faq">
-    <h2>❓ Frequently Asked Questions</h2>
+    <h2>Frequently Asked Questions</h2>
     <span class="faq-q">Q: Does the app work without internet?</span>
-    <p class="faq-a">A: Yes, as long as you have downloaded the required offline language models. [cite: 19, 137]</p>
+    <p class="faq-a">A: Yes, as long as you have downloaded the required offline language models.</p>
 
     <span class="faq-q">Q: Does the app show advertisements?</span>
-    <p class="faq-a">A: Free users may see limited ads to support the maintenance of the app. [cite: 11]</p>
+    <p class="faq-a">A: Free users may see limited ads to support the maintenance of the app.</p>
 
     <span class="faq-q">Q: My voice is not being detected?</span>
-    <p class="faq-a">A: Ensure you have granted Microphone permissions and speak clearly near the device. [cite: 107, 110]</p>
+    <p class="faq-a">A: Ensure you have granted Microphone permissions and speak clearly near the device.</p>
   </section>
 
   <section>
-    <h2>🛠️ Troubleshooting</h2>
+    <h2>Troubleshooting</h2>
     <ul>
       <li><strong>App Crash:</strong> Restart the application or clear the app cache from settings.</li>
       <li><strong>Connection Failed:</strong> Ensure both Bluetooth and Wi-Fi are enabled on both devices.</li>
       <li><strong>No Audio:</strong> Check your device's media volume and ensure the TTS engine is updated.</li>
-      <li><strong>Storage Issues:</strong> Ensure you have enough free space (approx. 50MB per language) to download models. [cite: 205]</li>
+      <li><strong>Storage Issues:</strong> Ensure you have enough free space (approx. 50MB per language) to download models.</li>
     </ul>
   </section>
 
   <div class="contact-box">
     <strong>Need more help?</strong><br>
-    If your issue isn't listed above, please contact our support team:<br>
+    If your issue isn't listed above, please contact our support team. <strong>You can also attach screenshots of your issue to the email for faster resolution.</strong><br>
     <a href="mailto:clvca.official@gmail.com" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">clvca.official@gmail.com</a>
   </div>
 
