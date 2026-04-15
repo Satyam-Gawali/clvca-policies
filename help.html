@@ -1,157 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLVCA Support Center</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --md-primary: #6750A4;
-            --md-surface: #FEF7FF;
-            --md-on-surface: #1D1B20;
-            --md-outline: #79747E;
-            --md-secondary: #625B71;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--md-surface);
-            color: var(--md-on-surface);
-            margin: 0; padding: 16px; line-height: 1.6;
-        }
-
-        .container { max-width: 650px; margin: auto; }
-
-        header { text-align: center; padding: 32px 0; border-bottom: 1px solid #e0e0e0; margin-bottom: 24px; }
-        h1 { font-size: 28px; margin: 0; color: var(--md-primary); font-weight: 700; }
-        .version { font-size: 12px; color: var(--md-outline); margin-top: 4px; }
-
-        .section-header {
-            font-size: 14px; font-weight: 700; color: var(--md-primary);
-            margin: 28px 0 12px 4px; text-transform: uppercase; letter-spacing: 0.8px;
-        }
-
-        .card {
-            background: #ffffff; border-radius: 16px; padding: 16px; margin-bottom: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;
-        }
-
-        details { cursor: pointer; }
-        summary { 
-            font-weight: 500; font-size: 16px; list-style: none; 
-            display: flex; justify-content: space-between; align-items: center; 
-        }
-        summary::-webkit-details-marker { display: none; }
-        summary::after { content: '+'; font-size: 20px; color: var(--md-primary); font-weight: bold; }
-        details[open] summary::after { content: '−'; }
-
-        .answer { 
-            padding-top: 12px; color: #49454F; font-size: 14px; 
-            border-top: 1px solid #f5f5f5; margin-top: 12px; text-align: justify;
-        }
-        
-        .disclaimer-box {
-            background: #FFF8F1; border-radius: 12px; padding: 12px; 
-            border-left: 4px solid #FFB400; font-size: 13px; margin-top: 10px; color: #49454F;
-        }
-
-        .tag {
-            font-size: 10px; background: #E8DEF8; color: #1D192B; 
-            padding: 2px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle;
-        }
-
-        footer { text-align: center; padding: 40px 20px; color: var(--md-outline); font-size: 12px; }
-        .contact-btn { color: var(--md-primary); text-decoration: none; font-weight: bold; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLVCA Help Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <h1>CLVCA Help Center</h1>
-        <p class="version">Official Support • v1.0.0</p>
-    </header>
+  <header>
+    <h1>CLVCA Support Center</h1>
+    <p class="last-updated">Official Guide • Version 1.0.0</p>
+  </header>
 
-    <div class="section-header">Translation & AI</div>
-    <div class="card">
-        <details>
-            <summary>How accurate are the translations?</summary>
-            <div class="answer">
-                Translations are generated using Google ML Kit AI. While highly advanced, they may not be 100% accurate. 
-                <b>Always verify</b> sensitive or legal information before relying on the app.
-            </div>
-        </details>
-    </div>
-    <div class="card">
-        <details>
-            <summary>Why is a specific language not working?</summary>
-            <div class="answer">
-                Ensure both source and target language models are downloaded in <b>Settings > Language & Translation</b>. 
-                If the model download fails, check your internet connection and device storage.
-            </div>
-        </details>
-    </div>
+  <p class="intro">Find quick answers to common questions about using CLVCA for offline voice translation.</p>
 
-    <div class="section-header">Voice & Connectivity</div>
-    <div class="card">
-        <details>
-            <summary>Speech-to-Text (STT) Requirements <span class="tag">Technical</span></summary>
-            <div class="answer">
-                Voice input accuracy depends on your device's speech engine. While the translation is offline, 
-                Android's voice recognition may occasionally require internet access to process audio clearly.
-            </div>
-        </details>
-    </div>
-    <div class="card">
-        <details>
-            <summary>Peer-to-Peer (P2P) Troubleshooting</summary>
-            <div class="answer">
-                For local voice chat, both devices must have <b>Bluetooth and Location</b> enabled. 
-                On Android 12+, "Nearby Devices" permission is mandatory. P2P works within a 10-15 meter range.
-            </div>
-        </details>
-    </div>
+  <section>
+    <h2>Voice & Audio</h2>
+    <p>Troubleshoot speech recognition and audio playback.</p>
+    <ul>
+      <li><strong>Why is the translation silent (TTS)?</strong> CLVCA uses <b>Flutter TTS</b>, which depends on your phone's native speech engine. If you can't hear anything, ensure the "Voice Data" for that language is installed in <b>Settings > Google TTS Output</b>.</li>
+      <li><strong>Does Speech-to-Text (STT) need internet?</strong> In most cases, yes. Accuracy depends on your device's engine. While translation is offline, your phone may need a connection for high-accuracy voice processing.</li>
+      <li><strong>How to change Voice speed?</strong> You can adjust the pitch and speech rate directly from <b>Settings > Voice & Audio</b>.</li>
+    </ul>
+  </section>
 
-    <div class="section-header">Privacy & Security</div>
-    <div class="card">
-        <details>
-            <summary>Is my voice being recorded?</summary>
-            <div class="answer">
-                <b>No.</b> We prioritize your privacy. Audio is processed locally on your device for translation and then 
-                immediately discarded. CLVCA does not store voice recordings on any server.
-            </div>
-        </details>
-    </div>
-    <div class="card">
-        <details>
-            <summary>How can I delete my data?</summary>
-            <div class="answer">
-                You can wipe all translation history and cached settings at any time by going to 
-                <b>Settings > Support > Clear App Data</b>. This action is permanent.
-            </div>
-        </details>
-    </div>
+  <section>
+    <h2>Managing Your Data</h2>
+    <p>You have full control over what is stored on your device.</p>
+    <ul>
+      <li><strong>How to delete History?</strong> Go to the <strong>Translation History</strong> screen. You can delete individual logs or clear the entire list from there.</li>
+      <li><strong>How to remove Language Models?</strong> Navigate to <strong>Settings > Manage Languages</strong>. You can uninstall any downloaded model to free up space.</li>
+      <li><strong>How to clear App Cache?</strong> Logging out from the <strong>Settings</strong> menu will automatically clear your temporary app cache and user configurations.</li>
+    </ul>
+  </section>
 
-    <div class="section-header">Account & Ads</div>
-    <div class="card">
-        <details>
-            <summary>Why am I seeing advertisements?</summary>
-            <div class="answer">
-                To keep CLVCA free for everyone, we use Google AdMob to show ads. These partners may use your 
-                Device ID or Advertising ID to provide relevant content. 
-                <div class="disclaimer-box">
-                    Ad-blocking software is prohibited as per our Terms & Conditions.
-                </div>
-            </div>
-        </details>
-    </div>
-    
+  <section>
+    <h2>P2P & Connection</h2>
+    <p>Chat with nearby friends without using cellular data.</p>
+    <ul>
+      <li><strong>How to use P2P?</strong> Ensure Bluetooth and Location are ON. One person must "Start Host" and the other "Join". Range is approx. 10-15 meters.</li>
+      <li><strong>Why sign in?</strong> Guest mode works locally, but signing in with Google allows you to sync your preferences and access premium features.</li>
+    </ul>
+  </section>
 
-    <footer>
-        &copy; 2026 CLVCA App • Satyam K. Gawali<br>
-        Need more help? <a href="mailto:clvca.official@gmail.com" class="contact-btn">Email Support</a>
-    </footer>
+  <section>
+    <h2>Accuracy Disclaimer</h2>
+    <div class="contact-box" style="background-color: #fffbeb; border-left-color: #f59e0b;">
+      <span class="highlight-text">Important:</span> AI translations are not always 100% accurate. Please verify critical information before relying on them for legal or medical purposes.
+    </div>
+  </section>
+
+  <div class="contact-box">
+    <strong>Need further assistance?</strong><br>
+    Our team is here to help. Contact us via email:<br>
+    <a href="mailto:clvca.official@gmail.com" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">clvca.official@gmail.com</a>
+  </div>
+
+  <footer style="text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.75rem;">
+    &copy; 2026 CLVCA App. All rights reserved.
+  </footer>
 </div>
 
 </body>
