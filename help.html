@@ -3,63 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CLVCA Help Center</title>
+  <title>CLVCA Support Center</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Quick Nav Styling */
+    nav {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+    nav button {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    nav button:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+    .faq-q { font-weight: 600; color: #111; margin-top: 15px; display: block; }
+    .faq-a { color: var(--text-muted); font-size: 0.85rem; }
+  </style>
 </head>
 <body>
 
 <div class="container">
   <header>
     <h1>CLVCA Support Center</h1>
-    <p class="last-updated">Official Guide • Version 1.0.0</p>
+    <p class="last-updated">Stable Release • v1.0.0 Build 2026.1001</p>
   </header>
 
-  <p class="intro">Find quick answers to common questions about using CLVCA for offline voice translation.</p>
+  <nav>
+    <button onclick="document.getElementById('voice').scrollIntoView()">🎤 Voice</button>
+    <button onclick="document.getElementById('p2p').scrollIntoView()">📶 P2P Mode</button>
+    <button onclick="document.getElementById('privacy').scrollIntoView()">🔒 Privacy</button>
+    <button onclick="document.getElementById('faq').scrollIntoView()">❓ FAQ</button>
+  </nav>
 
-  <section>
-    <h2>Voice & Audio</h2>
-    <p>Troubleshoot speech recognition and audio playback.</p>
+  <p class="intro">CLVCA (Cross-Language Voice Chat Application) is an offline AI-powered communication app designed for real-time translation between nearby devices. [cite: 263]</p>
+
+  <section id="voice">
+    <h2>🎤 Voice Recognition & Output</h2>
+    <p>Understand how CLVCA processes your speech and generates audio.</p>
     <ul>
-      <li><strong>Why is the translation silent (TTS)?</strong> CLVCA uses <b>Flutter TTS</b>, which depends on your phone's native speech engine. If you can't hear anything, ensure the "Voice Data" for that language is installed in <b>Settings > Google TTS Output</b>.</li>
-      <li><strong>Does Speech-to-Text (STT) need internet?</strong> In most cases, yes. Accuracy depends on your device's engine. While translation is offline, your phone may need a connection for high-accuracy voice processing.</li>
-      <li><strong>How to change Voice speed?</strong> You can adjust the pitch and speech rate directly from <b>Settings > Voice & Audio</b>.</li>
+      <li><strong>Speech-to-Text (STT):</strong> Translation works 100% offline, but high-accuracy voice recognition depends on your device's native engine. [cite: 263, 268] Some devices may require a one-time internet connection to verify voice data.</li>
+      <li><strong>Silent Output (TTS):</strong> CLVCA uses the <b>Flutter TTS</b> engine. [cite: 722] If you hear no sound, please ensure "Speech Services by Google" is set as your default engine in your Phone Settings.</li>
+      <li><strong>Regional Accents:</strong> You can customize speaking speed, pitch, and regional accents in <b>Settings > Voice & Audio</b>. [cite: 182, 183]</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Managing Your Data</h2>
-    <p>You have full control over what is stored on your device.</p>
+  <section id="p2p">
+    <h2>📶 P2P Connectivity</h2>
+    <p>Connect with nearby friends without using cellular data or the internet. [cite: 263, 266]</p>
     <ul>
-      <li><strong>How to delete History?</strong> Go to the <strong>Translation History</strong> screen. You can delete individual logs or clear the entire list from there.</li>
-      <li><strong>How to remove Language Models?</strong> Navigate to <strong>Settings > Manage Languages</strong>. You can uninstall any downloaded model to free up space.</li>
-      <li><strong>How to clear App Cache?</strong> Logging out from the <strong>Settings</strong> menu will automatically clear your temporary app cache and user configurations.</li>
+      <li><strong>How to Link:</strong> One user must <b>"Start Hosting"</b> while the other selects <b>"Join Friend."</b> [cite: 311, 312]</li>
+      <li><strong>Scanning QR:</strong> For instant pairing, ask your friend to scan the QR code displayed on the Host's screen. [cite: 330, 331]</li>
+      <li><strong>Effective Range:</strong> Maintain a distance of 10-15 meters for a stable Bluetooth/Wi-Fi connection.</li>
     </ul>
   </section>
 
-  <section>
-    <h2>P2P & Connection</h2>
-    <p>Chat with nearby friends without using cellular data.</p>
+  <section id="privacy">
+    <h2>🔒 Privacy Promise</h2>
+    <p>Your privacy is built into the core of CLVCA. [cite: 271]</p>
     <ul>
-      <li><strong>How to use P2P?</strong> Ensure Bluetooth and Location are ON. One person must "Start Host" and the other "Join". Range is approx. 10-15 meters.</li>
-      <li><strong>Why sign in?</strong> Guest mode works locally, but signing in with Google allows you to sync your preferences and access premium features.</li>
+      <li><strong>On-Device Processing:</strong> CLVCA does not upload your personal voice data to any server. [cite: 271] All processing happens locally on your hardware. [cite: 269]</li>
+      <li><strong>History Control:</strong> You can permanently delete your conversation logs by selecting <b>"Clear All History"</b> in the History screen. [cite: 171, 175]</li>
+      <li><strong>Cache Reset:</strong> Logging out or clearing app data in Settings will reset your configurations and temporary cache. [cite: 734, 736]</li>
     </ul>
   </section>
 
+  <section id="faq">
+    <h2>❓ Frequently Asked Questions</h2>
+    <span class="faq-q">Q: Does the app work without internet?</span>
+    <p class="faq-a">A: Yes, as long as you have downloaded the required offline language models. [cite: 19, 137]</p>
+
+    <span class="faq-q">Q: Does the app show advertisements?</span>
+    <p class="faq-a">A: Free users may see limited ads to support the maintenance of the app. [cite: 11]</p>
+
+    <span class="faq-q">Q: My voice is not being detected?</span>
+    <p class="faq-a">A: Ensure you have granted Microphone permissions and speak clearly near the device. [cite: 107, 110]</p>
+  </section>
+
   <section>
-    <h2>Accuracy Disclaimer</h2>
-    <div class="contact-box" style="background-color: #fffbeb; border-left-color: #f59e0b;">
-      <span class="highlight-text">Important:</span> AI translations are not always 100% accurate. Please verify critical information before relying on them for legal or medical purposes.
-    </div>
+    <h2>🛠️ Troubleshooting</h2>
+    <ul>
+      <li><strong>App Crash:</strong> Restart the application or clear the app cache from settings.</li>
+      <li><strong>Connection Failed:</strong> Ensure both Bluetooth and Wi-Fi are enabled on both devices.</li>
+      <li><strong>No Audio:</strong> Check your device's media volume and ensure the TTS engine is updated.</li>
+      <li><strong>Storage Issues:</strong> Ensure you have enough free space (approx. 50MB per language) to download models. [cite: 205]</li>
+    </ul>
   </section>
 
   <div class="contact-box">
-    <strong>Need further assistance?</strong><br>
-    Our team is here to help. Contact us via email:<br>
+    <strong>Need more help?</strong><br>
+    If your issue isn't listed above, please contact our support team:<br>
     <a href="mailto:clvca.official@gmail.com" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">clvca.official@gmail.com</a>
   </div>
 
   <footer style="text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.75rem;">
+    Developed & Maintained by Satyam K. Gawali<br>
+    Shatabdi Institute of Engineering and Research, Nashik<br>
     &copy; 2026 CLVCA App. All rights reserved.
   </footer>
 </div>
