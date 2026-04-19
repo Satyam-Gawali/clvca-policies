@@ -1,147 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Legal Center | CLVCA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLVCA Policy & Support Center</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --primary-color: #2563eb;
-      --primary-hover: #1d4ed8;
-      --bg-body: #f8fafc;
-      --text-main: #1e293b;
-      --text-muted: #64748b;
+    :root{
+      --primary:#2563eb;
+      --primary-hover:#1d4ed8;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --border:#e2e8f0;
+      --success:#16a34a;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-body);
-      color: var(--text-main);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
+    body{
+      font-family:'Inter',sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(37,99,235,0.08), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(37,99,235,0.05), transparent 30%),
+        var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
     }
 
-    .card {
-      background: #ffffff;
-      max-width: 450px;
-      width: 100%;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-      text-align: center;
-      border: 1px solid #e2e8f0;
+    .wrapper{
+      width:100%;
+      max-width:520px;
     }
 
-    .logo-area {
-      width: 70px;
-      height: 70px;
-      background: var(--primary-color);
-      color: white;
-      border-radius: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 24px;
-      font-weight: 800;
-      margin: 0 auto 25px;
-      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:38px 30px;
+      box-shadow:
+        0 20px 25px -5px rgba(15,23,42,0.05),
+        0 10px 10px -5px rgba(15,23,42,0.02);
     }
 
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      letter-spacing: -0.02em;
+    .top-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:12px;
+      font-weight:600;
+      color:var(--success);
+      background:#f0fdf4;
+      border:1px solid #dcfce7;
+      padding:6px 12px;
+      border-radius:999px;
+      margin-bottom:18px;
     }
 
-    p {
-      color: var(--text-muted);
-      font-size: 1rem;
-      margin-bottom: 35px;
-      line-height: 1.5;
+    .logo{
+      width:74px;
+      height:74px;
+      border-radius:22px;
+      background:linear-gradient(135deg,var(--primary),#3b82f6);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:26px;
+      font-weight:800;
+      letter-spacing:-0.03em;
+      box-shadow:0 16px 24px rgba(37,99,235,0.28);
+      margin-bottom:22px;
     }
 
-    .links-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+    h1{
+      font-size:1.9rem;
+      line-height:1.15;
+      letter-spacing:-0.03em;
+      margin-bottom:12px;
     }
 
-    .policy-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 24px;
-      background: #ffffff;
-      color: var(--text-main);
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 600;
-      border: 1px solid #e2e8f0;
-      transition: all 0.2s ease;
+    .subtitle{
+      color:var(--muted);
+      font-size:0.98rem;
+      line-height:1.6;
+      margin-bottom:28px;
     }
 
-    .policy-link:hover {
-      border-color: var(--primary-color);
-      background-color: #f0f7ff;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    .section-label{
+      font-size:0.78rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--muted);
+      font-weight:700;
+      margin-bottom:14px;
     }
 
-    .policy-link span {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    .links{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
     }
 
-    .icon {
-      font-size: 1.2rem;
+    .link-card{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      text-decoration:none;
+      color:var(--text);
+      padding:18px 18px;
+      border:1px solid var(--border);
+      border-radius:16px;
+      background:#fff;
+      transition:all .2s ease;
     }
 
-    .arrow {
-      color: var(--primary-color);
-      font-weight: 700;
+    .link-card:hover{
+      transform:translateY(-2px);
+      border-color:rgba(37,99,235,0.45);
+      background:#f8fbff;
+      box-shadow:0 10px 20px rgba(37,99,235,0.08);
     }
 
-    footer {
-      margin-top: 40px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
+    .left{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .icon-box{
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      background:#eff6ff;
+      color:var(--primary);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.15rem;
+      flex-shrink:0;
+    }
+
+    .text-group{
+      min-width:0;
+    }
+
+    .title{
+      font-size:0.97rem;
+      font-weight:700;
+      margin-bottom:3px;
+    }
+
+    .desc{
+      font-size:0.82rem;
+      color:var(--muted);
+      line-height:1.45;
+    }
+
+    .arrow{
+      color:var(--primary);
+      font-size:1rem;
+      font-weight:800;
+      flex-shrink:0;
+    }
+
+    .trust-box{
+      margin-top:24px;
+      padding:16px 18px;
+      background:#f8fafc;
+      border:1px solid var(--border);
+      border-radius:16px;
+    }
+
+    .trust-box strong{
+      display:block;
+      margin-bottom:8px;
+      font-size:0.92rem;
+    }
+
+    .trust-box p{
+      color:var(--muted);
+      font-size:0.84rem;
+      line-height:1.6;
+    }
+
+    footer{
+      text-align:center;
+      margin-top:22px;
+      color:var(--muted);
+      font-size:0.8rem;
+      line-height:1.6;
+    }
+
+    footer strong{
+      color:var(--text);
+      font-weight:700;
+    }
+
+    @media (max-width:600px){
+      .card{
+        padding:28px 18px;
+        border-radius:20px;
+      }
+
+      h1{
+        font-size:1.65rem;
+      }
+
+      .subtitle{
+        font-size:0.92rem;
+      }
+
+      .link-card{
+        padding:16px;
+      }
     }
   </style>
 </head>
 <body>
 
-<div class="card">
-  <div class="logo-area">C</div>
-  
-  <h1>CLVCA Legal Center</h1>
-  <p>Please review our official policies and terms to understand how we protect your data and govern app usage.</p>
+<div class="wrapper">
+  <div class="card">
 
-  <div class="links-wrapper">
-    <a href="privacy-policy.html" class="policy-link">
-      <span><span class="icon">🛡️</span> Privacy Policy</span>
-      <span class="arrow">→</span>
-    </a>
+    <div class="top-badge">● Official CLVCA Resources</div>
 
-    <a href="terms.html" class="policy-link">
-      <span><span class="icon">📜</span> Terms & Conditions</span>
-      <span class="arrow">→</span>
-    </a>
+    <div class="logo">CL</div>
+
+    <h1>CLVCA Policy & Support Center</h1>
+
+    <p class="subtitle">
+      Access our official privacy, legal, and support resources to understand how CLVCA protects your data and delivers a trusted user experience.
+    </p>
+
+    <div class="section-label">Resources</div>
+
+    <div class="links">
+
+      <a href="privacy-policy.html" class="link-card">
+        <div class="left">
+          <div class="icon-box">🛡️</div>
+          <div class="text-group">
+            <div class="title">Privacy Policy</div>
+            <div class="desc">Learn how your data is handled and protected.</div>
+          </div>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+
+      <a href="terms.html" class="link-card">
+        <div class="left">
+          <div class="icon-box">📜</div>
+          <div class="text-group">
+            <div class="title">Terms & Conditions</div>
+            <div class="desc">Review the rules and terms of app usage.</div>
+          </div>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+
+      <a href="help.html" class="link-card">
+        <div class="left">
+          <div class="icon-box">🛟</div>
+          <div class="text-group">
+            <div class="title">Help Center</div>
+            <div class="desc">Get support, FAQs, and troubleshooting help.</div>
+          </div>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+
+    </div>
+
+    <div class="trust-box">
+      <strong>Privacy-First Commitment</strong>
+      <p>
+        CLVCA is built with an offline-first approach. Most processing happens directly on your device, helping improve privacy and responsiveness.
+      </p>
+    </div>
+
   </div>
 
   <footer>
-    © 2026 CLVCA by <strong>Satyam K. Gawali</strong>
+    © 2026 CLVCA by <strong>Satyam Studios</strong><br>
+    Official Documentation Portal
   </footer>
 </div>
 
