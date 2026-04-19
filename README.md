@@ -1,45 +1,51 @@
 # CLVCA Policies
 
-This repository contains the official legal documents for **CLVCA (Cross-Language Voice Chat Application)**.
+This repository contains the official legal and support documents for **CLVCA (Cross-Language Voice Chat Application)**.
 
 ---
 
-## 📄 Documents
+## 📄 Official Documents
 
-- 🔐 [Privacy Policy](https://satyam-gawali.github.io/clvca-policies/privacy-policy.html)
+- 🔐 Privacy Policy  
+https://satyam-gawali.github.io/clvca-policies/privacy-policy.html
 
-- 📜 [Terms & Conditions](https://satyam-gawali.github.io/clvca-policies/terms.html)
+- 📜 Terms & Conditions  
+https://satyam-gawali.github.io/clvca-policies/terms.html
+
+- 🛟 Help Center  
+https://satyam-gawali.github.io/clvca-policies/help.html
 
 ---
 
 ## 📱 About CLVCA
 
-CLVCA is an **offline-first voice translation app** designed with a strong focus on privacy and real-time cross-language communication.
+CLVCA is an offline-first voice communication and translation app built to enable faster and smarter conversations across languages.
 
 ### 🚀 Key Highlights
 
-* 🔒 Privacy-first architecture
-* 📡 Offline translation support
-* 🎙️ No voice data stored on servers
-* 🔗 Peer-to-Peer (P2P) communication
-* ⚡ Lightweight and efficient
+- 🔒 Privacy-first architecture
+- 📡 Offline translation support
+- 🎙️ On-device speech processing
+- 🔗 Peer-to-Peer (P2P) communication
+- ⚡ Lightweight and efficient experience
 
 ---
 
 ## 🔐 Privacy Commitment
 
-CLVCA ensures:
+CLVCA is designed with user trust in mind:
 
-* No voice conversations are stored or monitored
-* Most processing happens directly on-device
-* Minimal user data collection
+- Voice conversations are not stored on servers
+- Most processing happens directly on-device
+- Minimal user data collection
+- Transparent privacy practices
 
 ---
 
 ## 📬 Contact
 
-**Developer:** Satyam K. Gawali
-**Email:** [satyamgawali.sg@gmail.com](mailto:satyamgawali.sg@gmail.com)
+**Developer:** Satyam Studios  
+**Support Email:** clvca.official@gmail.com
 
 ---
 
